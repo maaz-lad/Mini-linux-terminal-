@@ -1,45 +1,48 @@
 while True:
-    command = input("> ")
-    parts = command.split()
 
-    if not parts:
+    user_input = input("> ")
+    command = user_input.lower().split()
+
+    if not command:
         print("type something")
         continue
 
-    if parts[0].lower() == "help":
+
+    if command[0] == "help":
+
         print("""
 help
-calc
 hello
+calc
 quit
 """)
 
-    elif parts[0].lower() == "quit":
+
+    elif command[0] == "hello":
+
+        print("hello user")
+
+
+    elif command[0] == "calc":
+
+        operation = command[1]
+
+        if operation == "add":
+
+            answer = 0
+
+            for number in command[2:]:
+
+                answer = answer + int(number)
+
+            print("answer =", answer)
+
+
+    elif command[0] == "quit":
+
         print("closing terminal...")
         break
 
-    elif parts[0].lower() == "hello":
-        print("hello user")
-
-    elif parts[0].lower() == "calc":
-
-        print("""
-1. add
-2. subtract
-3. multiply
-4. divide
-""")
-
-        operation = input("choose operation: ")
-
-        if operation.lower() == "add":
-
-            num1 = int(input("first number: "))
-            num2 = int(input("second number: "))
-
-            answer = num1 + num2
-
-            print("answer =", answer)
 
     else:
         print("unknown command")
