@@ -24,6 +24,12 @@ quit
 
 
     elif command[0] == "calc":
+        print("""
+        add
+        subtract
+        multiply 
+        divide
+        """)
 
         operation = command[1]
 
