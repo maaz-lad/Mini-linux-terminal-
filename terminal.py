@@ -32,7 +32,7 @@ quit
 
         operation = input("choose operation: ")
 
-        if operation == "add":
+        if operation.lower() == "add":
 
             num1 = int(input("first number: "))
             num2 = int(input("second number: "))
