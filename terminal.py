@@ -39,8 +39,12 @@ quit
 
             for number in command[2:]:
 
-                answer = answer + int(number)
+    try:
+        answer = answer + int(number)
 
+    except:
+        print("only numbers allowed")
+        
             print("answer =", answer)
 
 
